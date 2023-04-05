@@ -1,22 +1,26 @@
 package artikal;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class KucnaHemija extends Artikal {
 
 	
-	protected Date datum;
+	protected LocalDate datum;
 
-	public Date getDatum() {
+	public LocalDate getDatum() {
 		return datum;
 	}
 
-	public void setDatum(Date datum) {
+	public void setDatum(LocalDate datum) {
+		if(datum==null) {
+			throw new NullPointerException("datum ne sme biti null");
+		}
+		
 		this.datum = datum;
 	}
 
-	
-	
+
 	
 	@Override
 	public String toString() {
