@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class KucnaHemija extends Artikal {
 
-	private Date datum;
+	
+	protected Date datum;
 
 	public Date getDatum() {
 		return datum;
@@ -13,6 +14,16 @@ public class KucnaHemija extends Artikal {
 	public void setDatum(Date datum) {
 		this.datum = datum;
 	}
+
+	
+	
+	
+	@Override
+	public String toString() {
+		return "KucnaHemija [datum=" + datum + ", sifra=" + sifra + ", naziv=" + naziv + ", opis=" + opis
+				+ ", kolicina=" + kolicina + "]";
+	}
+
 	
 	
 	
